@@ -1,0 +1,28 @@
+body{
+    background-color: rgba(66,73,82, .8);
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+
+button{
+    font-size: 80px;
+    background-color: rgba(66,73,82, 1);
+    border: solid black 1px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition:all;
+    transition-duration: .07s;
+}
+
+button:hover{
+    font-size:90px;
+    box-shadow: 0px 0px 5px yellow;
+}
