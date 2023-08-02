@@ -1,11 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+
 body{
     background-color: rgba(66,73,82, .8);
     display: flex;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
+    flex-direction: column;
+}
+
+p{
+    font-size: 80px;
+    color: whitesmoke;
+    font-family: "Roboto";
+    margin-bottom: 10px;
 }
 
 .container{
+    /* height:30vw; */
+    margin-top:20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,11 +25,11 @@ body{
 }
 
 button{
-    font-size: 80px;
+    font-size: 100px;
     background-color: rgba(66,73,82, 1);
     border: solid black 1px;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 5px 20px 20px 20px;
     transition:all;
     transition-duration: .07s;
 }
@@ -25,4 +37,35 @@ button{
 button:hover{
     font-size:90px;
     box-shadow: 0px 0px 6px yellow;
+}
+
+.results-container{
+    /* height: 30vw; */
+    display:flex;
+    flex-direction: row;
+    gap:50px;
+    align-items: center;
+    justify-content: center;
+}
+.results-container>div{
+    display:flex;
+    flex-direction: column;
+    gap:0px;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-result{
+    color:white;
+    font-size: 50px;
+    font-family: 'Raleway', sans-serif;
+    margin-top:20px;
+}
+
+#computerChoice, #personChoice{
+    font-size: 150px;
+    background-color: rgba(66,73,82, 1);
+    border: solid black 1px;
+    border-radius: 5px;
+    padding: 3px 20px 20px 20px;
 }

@@ -52,48 +52,43 @@ else {
             return "my bad";
     }
 }
+}   
+
+function toEmojie(choice){
+    if(choice=='rock'){
+        return "✊";
+    }
+    else if(choice=='scissors'){
+        return "✌️";
+    }
+    else{
+        return "✋"
+    }
 }
 
-function getInput(callback){
-    let result =''
     const rock = document.querySelector('#rock');
     const paper = document.getElementById('paper');
     const scissors = document.getElementById('scissors');
+    const player = document.getElementById('personChoice');
+    const computer = document.getElementById('computerChoice');
+    const result=document.querySelector('.text-result');
     
+   let computerChoice;
     rock.addEventListener('click', function(){
-         console.log(rock.id)
-        result = rock.id;
+     computerChoice=getComputerChoice();
+     result.innerText=(playRound("rock",computerChoice));
+     player.innerText='✊';
+     computer.innerText=toEmojie(computerChoice);
     });
     scissors.addEventListener('click', function(){
-        console.log(scissors.id)
-       result = scissors.id;
+     computerChoice=getComputerChoice()
+     result.innerText=(playRound("scissors",computerChoice));
+     player.innerText='✌️';
+     computer.innerText=toEmojie(computerChoice);
    });
    paper.addEventListener('click', function(){
-    console.log(paper.id)
-   result = paper.id;
+    computerChoice=getComputerChoice()
+    result.innerText=(playRound("paper",computerChoice));
+    player.innerText='✋';
+    computer.innerText=toEmojie(computerChoice);
 });
-    if(result){
-        return result;
-    }
-    else{
-        getInput()
-    }
-     
-}
-
-function game(){
-//    let player= format(prompt("Pick your poision"));
-//    console.log(player);
-    let player=getInput();
-    console.log(player);
-    if(player == "rock"||player == "paper"||player == "scissors"){
-        let result = playRound(player, getComputerChoice());
-        return result;      
-    }
-}
-
-
-
-
-game();
-
